@@ -1,0 +1,42 @@
+body{background-color: rgb(184, 190, 129);}
+h1 {color : rgb(4, 4, 19);background-color: cadetblue;position: centre;}
+h1 {font-size: 70px;}
+
+
+
+
+        .split {
+          height: 50%;
+          width: 50%;
+          position: fixed;
+          /*z-index: 1;
+          margin-top: 10%;
+          overflow-x: hidden;
+          padding-top: 20px;*/
+        }
+        
+        .left {
+          left: 0;
+        }
+        
+        .right {
+          right: 0;
+          
+        }
+        
+        .centered {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: cadetblue;
+            color: rgb(17, 9, 9);
+            text-align: center;
+          }

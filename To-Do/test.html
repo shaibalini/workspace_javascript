@@ -1,0 +1,70 @@
+<html>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+  <body>
+    <script>
+      function addActivity() {
+        var li = document.createElement("li");
+        var text=document.createElement("input");
+        var editButton = document.createElement("button");
+        
+        var deleteButton = document.createElement("button");
+        var text_edit=document.createTextNode("Edit");
+        var text_delete=document.createTextNode("Delete");
+        editButton.appendChild(text_edit);
+        deleteButton.appendChild(text_delete);
+       
+        
+        editButton.onclick=function (){
+            // inputValue=text.value;
+            
+            inputValue=text.value;
+            if(text.disabled==true){
+              text.disabled=false;
+            }
+            else if(text.disabled==false && inputValue==''){
+              
+              alert("Please enter valid activity!");
+            }
+            else if(text.disabled==false && inputValue!=''){
+              text.disabled=true;
+            }
+            
+          
+            
+        };
+        
+        
+        document.getElementById("toDo").appendChild(li);
+        li.appendChild(text);
+        li.appendChild(editButton);
+        li.appendChild(deleteButton);
+        var toDo=document.getElementsByClassName("a");
+        
+        
+        
+        deleteButton.onclick=function(){
+            var ul=document.getElementById("toDo");
+            ul.removeChild(li);
+        }
+        
+      }
+
+      
+    </script>
+
+    <h2 style="text-align:center">To-Do List</h2>
+    <button
+      class="btn btn-primary"
+      type="button"
+      name="Add"
+      value="Add"
+      onclick="addActivity()"
+    >
+      Add Acitivity
+    </button>
+    <ol class="a" id="toDo">
+
+    </ol>
+  </body>
+</html>

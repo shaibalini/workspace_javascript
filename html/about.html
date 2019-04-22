@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+<head>
+<title>Page Title</title>
+</head>
+<body style = "background-image:url(zig.jpg);
+background-repeat:no-repeat;background-size: cover">
+<script>
+   function addTiming(){
+      var field1=document.getElementById("a").value;
+      var field2=document.getElementById("b").value;
+      var field3=document.getElementById("c").value;
+      console.log(field1);
+      console.log(field2);
+      console.log(field3);
+      var rows = (document.getElementById("tableId").rows.length)-1;
+      
+      // document.getElementById("Activity").innerHTML=field1.value;
+      // document.getElementById("st").innerHTML=field2.value;
+      // document.getElementById("en").innerHTML=field3.value;
+      var table=document.getElementById("append");
+      var row=table.insertRow(0);
+      var Activity=row.insertCell(0);
+      var st=row.insertCell(1);
+      var en=row.insertCell(2);
+      Activity.innerHTML=field1;
+      st.innerHTML=field2;
+      en.innerHTML=field3;
+   }
+</script>
+
+<h1><b>Equipments</b></h1>
+<p>Weights<br>
+    Trade mill<br>
+    Dumbells</p>
+<br>
+<br>
+
+<h2><b>Training packages</b></h2>
+<p>Gold   :::  Rs.1999/-<br>
+    Platinum   :::   Rs.1500/-<br>
+    silver   :::   Rs.999/-<br>
+    Copper   :::   Rs.599/-
+    </p>
+    <br>
+    <br>
+    
+    <h2><b>Enter your preferred Timings</b></h2>
+    <form>
+      Activities:<br>
+      <input type="text" id="a" name="Activity_name">
+      <br>
+      Start Timing:<br>
+      <input type="time" id="b" name="Start">
+      <br>
+      End Timing:<br>
+      <input type="time" id="c" name="End"><br><br>
+   
+   </form>
+      <button class="btn btn-primary" type="button" name="Submit" value="Submit" onclick="addTiming()">submit</button>
+        
+     
+ 
+    <h3><b>Timings</b></h3>
+    <table id="tableId" class="table" >
+            <tr>
+               <th><b>Activity</b></th>
+               <th><b>Start Time</b></th>
+               <th><b>End Time</b></th>
+            </tr>
+            
+            <!-- <tr>
+               <td>Aerobics</td>
+               <td>18:00</td>
+               <td>20:00</td>
+
+            </tr>
+            <tr>
+               <td id="Activity"></td>
+               <td id="st"></td>
+               <td id="en"></td>
+
+            </tr> -->
+         </table>
+         <table class="table" id="append">
+         
+         </table>
+</body>
+</html>

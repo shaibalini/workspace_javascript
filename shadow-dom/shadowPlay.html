@@ -1,0 +1,29 @@
+<html>
+
+<body>
+
+    <div class="x">Outer Element</div>
+    <style>
+        .x {
+            color: blueviolet;
+        }
+    </style>
+    <div id="shadowHost">Hello</div>
+
+    <script>
+        var host = document.querySelector('#shadowHost');
+
+        var shadowRoot = host.attachShadow({ mode:'closed'});
+
+        var div1 = document.createElement('div');
+        div1.textContent = "Can you see me now";
+        var div2 = document.createElement('div');
+        div2.textContent = "Hell yeah!";
+        div1.className='x';
+        shadowRoot.appendChild(div1);
+        shadowRoot.appendChild(div2);
+    </script>
+
+</body>
+
+</html>
